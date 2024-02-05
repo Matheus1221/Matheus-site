@@ -4,42 +4,241 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-html,
 body {
-  height: auto;
-  min-height: 100vh;
-}
+  /* background: linear-gradient(to right, #95a5a6, #3498db); */
+  /* background: linear-gradient(to right, #2ecc71, #3498db); */
+  /* background: linear-gradient(to right, #e67e22, #f1c40f); */
+  /* background: linear-gradient(to right, #e74c3c, #d35400); */
+  background-image: radial-gradient(
+    circle at 50% 12.07%,
+    #000 0,
+    #6363ea 25%,
+    #6363ea 57%,
+    #333 75%,
+    #333 100%
+  );
 
+  overflow-x: hidden;
+}
 #pressentetion-container {
-  max-width: 900px;
-  min-height: 80vh;
-  margin: 2rem auto;
-  display: flex;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
-
-#banner-layer {
-  background-color: rgba(25, 11, 122, 0.4);
-  height: 100%;
-  padding: 2rem;
+  width: 100vw;
+  height: 600px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  padding-left: 2rem;
+  align-items: center;
 }
-#banner-layer i {
-  font-size: 2rem;
+#pressentetion {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #fff;
 }
-#pressentetion-banner p {
+
+#pressentetion h1 {
+  color: #fff;
+}
+#pressentetion a {
+  cursor: pointer;
+  color: #fff;
+  transition: 0.4s;
   opacity: 0.7;
+  text-decoration: none;
+}
+#pressentetion a:hover {
+  color: #333;
+  opacity: 1;
+  border-bottom: 15px solid #fff;
+}
+#training {
+  height: 250px;
+  width: 1100px;
+  line-height: 90px;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+#training p {
+  font-size: 7.5rem;
   font-weight: bold;
   color: #fff;
-  font-size: 2rem;
 }
-#pressentetion-banner h1 {
-  font-size: 8rem;
-  word-spacing: 50rem;
-  margin-bottom: 1.5rem;
+#description {
+  display: flex;
+  height: 200px;
+  width: 350px;
+}
+#description p {
   color: #fff;
 }
+
+/* show projects */
+.show-projects {
+  width: 100vw;
+  height: 700px;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 57px -8px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.project-card,
+.project-manager {
+  width: 50%;
+}
+.project-manager {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.desktop-img {
+  padding-top: 20px;
+  height: 400px;
+}
+.manag-tablet-img {
+  position: absolute;
+  height: 350px;
+  top: 30px;
+  left: 5px;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.project-card .tablet-img {
+  height: 400px;
+  padding: 20px;
+}
+
+.mobile-img {
+  position: absolute;
+  height: 350px;
+  top: 50px;
+  left: -80px;
+}
+
+.description-project {
+  background-color: transparent;
+  height: 15 0px;
+  width: 380px;
+  margin: 2px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.description-project p {
+  font-size: 0.9rem;
+  padding: 2px;
+  color: #fff;
+  line-height: 1.5rem;
+}
+.description-project h2 {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #000;
+  color: #fff;
+}
+
+/* add nota para melhoras */
+
+#add-note-container {
+  display: flex;
+  width: 400px;
+  margin: 1rem auto 0;
+  gap: 1rem;
+  padding-top: 50px;
+}
+
+#add-note-container input,
+#add-note-container button {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#add-note-container input {
+  flex: 1;
+  background-color: transparent;
+  border: 1px solid #525356;
+  color: #fff;
+}
+#add-note-container button {
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Notas */
+
+#notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 500px);
+  padding: 2rem;
+  gap: 2rem;
+  width: 100%;
+}
+.note {
+  min-height: 200px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: #333;
+  border-radius: 10px;
+  color: #fff;
+  position: relative;
+}
+
+.note textarea {
+  background-color: transparent;
+  resize: none;
+  color: #000;
+  border: none;
+  height: 100%;
+  outline: none;
+}
+
+.note .bi-pin {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: #333;
+}
+
+.note:hover > i {
+  opacity: 1;
+}
+
+.note .bi-x-lg,
+.note .bi-file-earmark-plus {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 0.9rem;
+  padding: 5px;
+  transition: 0.3s;
+  color: #555;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.note .bi-file-earmark-plus {
+  top: 40px;
+}
+
+.note .bi-x-lg:hover,
+.note .bi-file-earmark-plus:hover {
+  color: #fff;
+}
+
+.note.fixed {
+  background-color: #3c3c3f;
+}
+
+/* ::placeholder {
+  color: #ddd;
+} */
