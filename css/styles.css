@@ -192,7 +192,7 @@ body {
 .note textarea {
   background-color: transparent;
   resize: none;
-  color: #000;
+  color: #fff;
   border: none;
   height: 100%;
   outline: none;
